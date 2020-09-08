@@ -1,0 +1,113 @@
+#gmap{
+     display: block;
+   align-items: center;
+     margin-left: auto;
+    margin-right: auto;
+}
+
+#mapab{
+   
+    align-items: center;
+    align-self: center;
+    
+}
+
+p{
+    font-family: oswald;
+}
+
+#OrderNo{
+    font-size: 17px;
+     margin: -12px 0px -12px 0px;
+}
+
+#ResName{
+    font-size: 20px;
+   
+}
+#OrderNo::before{
+    content:"OrderNo : ";
+    
+}
+
+li{
+    list-style: none;
+    font-family: oswald;
+}
+
+#ResItems
+{
+    margin: -20px 0px 12px 0px;
+}
+
+
+
+#AddressUser::before{
+    content: "Address : ";
+    
+}
+
+#totalMoney::before{
+    content: "TOTAL : ";
+}
+
+#totalMoney::after{
+    content: "$";
+}
+
+#paidMoney::before{
+    content: "Paid : ";
+    
+}
+
+#paidMoney::after{
+    content: "$";
+}
+
+#remainMoney::before{
+    content: "Pending : "
+}
+
+#remainMoney::after{
+    content: "$"
+}
+
+#cross{
+    font-size: 10px;
+}
+
+#OrderStatus{
+   color:#dd2600;
+    font-size: 20px;
+margin-top: -15px;
+   
+}
+
+.modal-content2{
+    width: 500px;
+}
+
+
+
+.cart2{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#titleOrder{
+   margin-right: 100px;
+}
+
+.hr11{
+    border: 1px solid #dd2600;
+}
+
+#orderr{
+    display: block;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+

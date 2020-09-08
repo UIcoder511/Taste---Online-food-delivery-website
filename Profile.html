@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    if(!localStorage.getItem("username"))
+        window.location.href='LoginSignup.html';
+    
+    </script>
+   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      
+<script type="text/javascript" src="main2.js"></script>
+<script type="text/javascript" src="JS/loginsignup.js"></script>
+    <script type="text/javascript" src="JS/ResItems.js"></script>
+    <script type="text/javascript" src="JS/cart.js"></script>
+<link rel="stylesheet" href="CSS/loginsignup.css">
+    <link rel="stylesheet" href="CSS/ResItems.css">
+    
+    <link rel="stylesheet" href="CSS/OrderDetails.css">
+     
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+       
+    <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    
+    <style>
+    
+       
+        #login_btn:hover{
+            opacity: 0.7;
+        }
+        
+        #sub:hover{
+            opacity: 0.7;
+        }
+        
+        .single-item{
+            margin: 20px;
+            padding: 20px;  
+            box-shadow: 0 0 20px 0px #999;
+            transition: 0.1s all;
+        }
+        
+        .single-item:hover{
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+        
+        .snipcart-thumb{
+            font-family: oswald;
+            
+        }
+        
+       
+        
+        #Container-Restaurants{
+            margin-top: 110px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        #totaladd {
+             font-family: oswald;
+             
+            box-shadow: 0px 0px 10px 1px gray;
+            border:#dd2600 solid 1px;
+             margin-left: 2px;
+        }
+        #area,#city{
+            font-family: oswald;
+             margin: 4px;
+            margin-left: 20px;
+            box-shadow: 0px 0px 10px 1px gray;
+            border:#dd2600 solid 1px;
+        }
+        
+        #flat{
+            width: 50px;
+            font-family: oswald;
+            box-shadow: 0px 0px 10px 1px gray;
+            border:#dd2600 solid 1px;
+            
+        }
+        aaa{
+             font-family: oswald;
+             font-size: 18px;
+           
+        }
+        
+        .hr{
+            
+   
+    border-top: 2px solid #ccc;
+    margin-left: 21px;
+    border-color:#dd2600;
+        }
+        
+        
+        /* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+        ::-webkit-scrollbar:hover {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+    width: 10px;
+}
+        
+        
+        .show-cart li {
+  display: flex;
+           
+}
+.card {
+  margin-bottom: 20px;
+    
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+        
+        .font{
+            font-family: oswald;
+        }
+        
+        .total-cart{
+            font-family: oswald;
+            font-size: 18px;
+
+        }
+        
+        .modal-title
+        {
+            font-size: 25px;
+            color: #dd2600;
+            margin-left: 370px;
+        }
+        
+        .total{
+            font-size: 22px;
+          
+        }
+        
+        
+        .modal-header
+        {
+            border-bottom: solid #eeeeee 2px;
+          
+        }
+        
+        .btn-primary{
+            background: #dd2600;
+        }
+        
+        .btn-secondary:hover{
+            background: white;
+            opacity: 0.7;
+        }
+        
+        .btn-primary:hover{
+            opacity: 0.7;
+            background: #dd2600;
+        }
+        
+        .close{
+            margin-left: 330px;
+        }
+        
+        #cart-button{
+            font-family: oswald;
+              display: block;
+	margin-right:100px;
+            margin-top: -57px;
+	padding: 2px 25px;
+	text-decoration: none;
+	border-radius: 60px;
+  line-height: 43px;
+  color: #FFF;
+	-webkit-transition: all 0.30s ease-in-out;
+  	-moz-transition: all 0.30s ease-in-out;
+  	-ms-transition: all 0.30s ease-in-out;
+  	-o-transition: all 0.30s ease-in-out;
+        }
+        
+        #clear-cart-button{
+             display: block;
+	margin-right:100px;
+	padding: 2px 25px;
+	text-decoration: none;
+	border-radius: 60px;
+  line-height: 45px;
+  color: #FFF;
+	-webkit-transition: all 0.30s ease-in-out;
+  	-moz-transition: all 0.30s ease-in-out;
+  	-ms-transition: all 0.30s ease-in-out;
+  	-o-transition: all 0.30s ease-in-out;
+        }
+    
+        td{
+            font-family: oswald;
+            
+        }
+        
+        .plus-item,.minus-item{
+            background: white;
+            font-size: 20px;
+            
+        }
+        
+        .plus-item:hover,.minus-item:hover{
+           
+            opacity: 0.7;
+        }
+        
+        #dolor{
+            font-size: 16px;
+            float: left;
+            margin-top: -1px;
+         
+        }
+        
+        .fnt{
+            font-size: 12px;
+            font-family: oswald;
+        }
+        
+        i{
+            color: white;
+            margin-right: 5px;
+        }
+        
+        
+        
+        
+        
+ /*SEARCH FORM*/
+.search-form {
+    border-radius: 30px 0px 0px 30px;
+   
+    /*border-radius:Top-left, Top-right, Bottom-right, Bottom-left;*/
+}
+/*to cange only one form and not all give unique class name like  class="search-form" */
+ .search-btn {
+    border-radius: 0px 30px 30px 0px;
+    cursor:pointer;
+}
+        
+        
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+.searchbox-container {
+ 
+    margin-top: -18px;
+  height: 50px;
+  display: inline-block;
+   
+   
+}
+
+.searchbutton, .searchbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  transition: background-color, 0.3s;
+  font-size: 20px;
+  line-height: 1;
+    font-family: oswald;
+  color: #999;
+  border-radius: 0;
+  float: left;
+  border: none;
+  height: 50px;
+  
+}
+
+input[type="search"] {
+  border-radius: 100px 0 0 100px;
+  -webkit-appearance: none;
+}
+
+.searchbox {
+  padding: 0px 20px;
+     border: 1px solid #ddd;
+   
+}
+
+.searchbox:focus {
+  outline: thin dotted;
+  outline-offset: -1px;
+}
+.searchbox.placeholder {
+  color: #aaa;
+ 
+    
+}
+.searchbox:-moz-placeholder {
+   color: #aaa;
+}
+.searchbox::-moz-placeholder {
+  color: #aaa;
+}
+.searchbox:-ms-input-placeholder {
+  color: #aaa;
+}
+.searchbox::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.searchbutton {
+  width: 50px;
+  padding: 0;
+ 
+  border-left: 1px solid #dd2600;
+  border-radius: 0 100px 100px 0;
+  background: #dd2600;
+}
+.searchbutton:hover, .searchbutton:focus {
+  opacity: 0.7;
+  outline: thin dotted;
+  outline-offset: -1px;
+    
+}
+.searchbutton:active {
+  color: #dd2600;
+}
+
+.example {
+  width: 20%;
+  position: absolute;
+  top: 40%;
+  margin-left: 200px;
+}
+
+    
+    </style>
+    
+    
+    <script>
+         function logout()
+        {
+            
+            localStorage.clear();
+            window.location.href = 'LoginSignup.html';
+        }
+    
+    
+    
+    </script>
+    
+    
+</head>
+<body>
+	<div class="main">
+        
+        
+        <!------------------Logout------------------------------------------------------------------>
+        <div class="main-nav">
+          
+        <a href="Profile.html" id="aa"><div id="logo"><img src="https://firebasestorage.googleapis.com/v0/b/taste-511.appspot.com/o/Logo%2FTasteLogo.jpg?alt=media&token=b922f9b4-66dd-4e35-b841-425062c0be5e" width="60px" style="margin: 7px;margin-left: 30px;"></div></a>
+           
+                  
+<div class="example">
+  <form class="searchbox-container" >
+      <input type="search" class="searchbox" autocomplete="off" id="ser" />
+      <button type="button" class="searchbutton" onclick="Usearch()"><i class="fa fa-search"></i></button>
+  </form>
+</div>
+            
+        <div class="btns">
+	       <ul> 
+               
+               <li class="lii"><a class="Login" href="#0" id="lo" onclick="logout()">Logout</a></li>
+		       <!--li><a class="signup" href="#0">Sign up</a></li-->
+               <li id="name" class="lii" style="padding-right: 100px;"><script>document.write(localStorage.getItem("username"))</script></li>
+                <li><button type="button" class="btn btn-primary" id="cart-button" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button></li>
+	       </ul>
+        </div>
+        </div>
+        
+      
+
+	</div>
+    
+    
+    
+
+
+<!------------------Firebase------------------------------------------------------------------>
+
+		<!--div id="recaptcha-container" class="recaptcha-container"></div-->
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBcZtlVRDsiZNoYhFuCTnLyhQvPCGoR8rc",
+    authDomain: "taste-511.firebaseapp.com",
+    databaseURL: "https://taste-511.firebaseio.com",
+    projectId: "taste-511",
+    storageBucket: "taste-511.appspot.com",
+    messagingSenderId: "179496115918"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    
+    
+
+	</div>
+
+   <div id="Container-Restaurants">
+        <div class="titles" style="font-size: 30px;font-family: oswald;margin-left: 20px;">Restaurants</div>
+       <hr class="hr" >
+    <div id='Restaurants'>
+    
+    </div>
+        
+        <script>
+            localStorage.setItem("Restaurant","null");
+            var r=document.getElementById("Restaurants");
+            
+            var i=0;
+            //for(i=0;i<6;i++)
+ 
+            
+            var ref = firebase.database().ref("Users/Restaurants");
+
+                            ref.once("value", function(snapshot){
+                                // Contains all data from Firebase
+                               // var data = snapshot.val();
+                               // var dates = Object.keys(snapshot);
+                                 //   console.log("dates : "+ dates);
+                                console.log(snapshot.val());
+                                 var j=0;
+                                
+                                
+                                        
+                                    
+                                snapshot.forEach(function(childSnapshot) {
+                                   // console.log(JSON.stringify(childSnapshot.val()));
+                                   //   console.log(childSnapshot.val());
+                                      //console.log(  Object.keys(childSnapshot.val()));
+                                   // sessionStorage.setItem("username",UName);
+                                    
+                                     if((childSnapshot.val().Verified)==("true")){
+                                         
+                                            var JSONdata=JSON.stringify(childSnapshot.val());
+                                    var name=(childSnapshot.val().Name);
+                                  //for(i=0;i<3;i++)  
+                                    
+                                     r.innerHTML=r.innerHTML+" <div class='col-md-2 top_brand_left single-item' id=\"btn\" pid="+/*JSONdata*/name+" ><div class='hover14 column'><div class='agile_top_brand_left_grid'><div class='agile_top_brand_left_grid1'> <figure><div class='snipcart-item block' ><div class='snipcart-thumb'></div><div class='snipcart-details top_brand_home_details'></div></div></figure></div></div> </div></div>"
+                                     var container=document.getElementsByClassName('single-item');
+                                    // var btn=document.getElementById('btn');
+                                    
+                                     //btn.value=JSONdata;
+                                     
+                                     var img=document.getElementsByClassName('snipcart-thumb')[j++];
+                                     var imgtag = document.createElement("img");
+                                     var Rname=document.createElement("H2");
+                                     var Rratings=document.createElement("img");
+                                     var RDT=document.createElement("H6");  
+                                    
+                                 
+                                     Rname.innerHTML=childSnapshot.val().Name;
+                                        
+                                      Rratings.setAttribute("src",childSnapshot.val().Ratings);
+                                      Rratings.setAttribute("height", "25px");
+                                    
+                                        
+                                     RDT.innerHTML=childSnapshot.val().DeliveryTime    
+                                        
+                                     imgtag.setAttribute("src",childSnapshot.val().DP);
+                                     imgtag.setAttribute("height", "150px");
+                                     imgtag.setAttribute("width", "150px");
+                                     imgtag.style.display = "block";
+                                     imgtag.style.margin = "0 auto";
+                                 
+                                        
+                                     img.appendChild(imgtag);
+                                     img.appendChild(Rname);
+                                     img.appendChild(Rratings);
+                                     img.appendChild(RDT);
+                                         
+                                     }
+                                    
+                                
+                                   
+                                        });
+                           
+                               
+                            });
+            
+            
+               
+                  
+            
+           
+        
+        </script>
+        
+</div>
+    
+    <!---on search-------------------------------------------------------------->
+    
+    
+    
+     <script>
+        
+         function Usearch()
+         {
+             
+        
+         
+            var r=document.getElementById("Restaurants");
+            r.innerHTML=null;
+         
+            var i=0;
+            //for(i=0;i<6;i++)
+ 
+            var key=document.getElementById('ser').value;
+         console.log(key);
+             
+             
+             var ref = firebase.database().ref("Users/Restaurants");
+
+                            ref.once("value", function(snapshot){
+                                // Contains all data from Firebase
+                               // var data = snapshot.val();
+                               // var dates = Object.keys(snapshot);
+                                 //   console.log("dates : "+ dates);
+                                console.log(snapshot.val());
+                                 var j=0;
+                                
+                                
+                                        
+                                    
+                                snapshot.forEach(function(childSnapshot) {
+                                    
+                                    
+                                    
+                                     if((childSnapshot.val().Verified)==("true"))
+                                         
+                                         {
+                                             
+                                             
+                                              // console.log(JSON.stringify(childSnapshot.val()));
+                                   //   console.log(childSnapshot.val());
+                                      //console.log(  Object.keys(childSnapshot.val()));
+                                   // sessionStorage.setItem("username",UName);
+                                   var JSONdata=JSON.stringify(childSnapshot.val());
+                                    var name=(childSnapshot.val().Name);
+                                  //for(i=0;i<3;i++)  
+                                    
+                                    if((name.toUpperCase()).includes(key.toUpperCase()))
+                                       // console.log(name);
+                                    {
+                                        
+                                        r.innerHTML=r.innerHTML+" <div class='col-md-2 top_brand_left single-item' id=\"btn\" pid="+/*JSONdata*/name+" ><div class='hover14 column'><div class='agile_top_brand_left_grid'><div class='agile_top_brand_left_grid1'> <figure><div class='snipcart-item block' ><div class='snipcart-thumb'></div><div class='snipcart-details top_brand_home_details'></div></div></figure></div></div> </div></div>"
+                                     var container=document.getElementsByClassName('single-item');
+                                    // var btn=document.getElementById('btn');
+                                    
+                                     //btn.value=JSONdata;
+                                     
+                                     var img=document.getElementsByClassName('snipcart-thumb')[j++];
+                                     var imgtag = document.createElement("img");
+                                     var Rname=document.createElement("H2");
+                                     var Rratings=document.createElement("img");
+                                     var RDT=document.createElement("H6");  
+                                    
+                                 
+                                     Rname.innerHTML=childSnapshot.val().Name;
+                                        
+                                      Rratings.setAttribute("src",childSnapshot.val().Ratings);
+                                      Rratings.setAttribute("height", "25px");
+                                    
+                                        
+                                     RDT.innerHTML=childSnapshot.val().DeliveryTime    
+                                        
+                                     imgtag.setAttribute("src",childSnapshot.val().DP);
+                                     imgtag.setAttribute("height", "150px");
+                                     imgtag.setAttribute("width", "150px");
+                                     imgtag.style.display = "block";
+                                     imgtag.style.margin = "0 auto";
+                                 
+                                        
+                                     img.appendChild(imgtag);
+                                     img.appendChild(Rname);
+                                     img.appendChild(Rratings);
+                                     img.appendChild(RDT);
+                                             
+                                             
+                                             
+                                         }
+                                  
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    }
+                                 
+                                   
+                                        });
+                           
+                               
+                            });
+            
+             
+             
+            
+         }
+                  
+            
+           
+        
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!-- The Modal Restaurants Items -->
+    
+<div id="myModal" class="modal-res">
+
+  <!-- Modal content -->
+    
+  <div class="modal-content-res">
+      
+      <div id="itms"></div>  
+      <div class="close-res">&times;</div>
+   
+  </div>
+
+</div>
+   
+    <script>
+        
+ var span = document.getElementsByClassName("close-res")[0];
+ var modal = document.getElementById('myModal');
+// When the user clicks the button, open the modal 
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+    var r=document.getElementById("itms"); 
+     $("body").removeClass("modal-open")
+    r.innerHTML="";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+      var r=document.getElementById("itms"); 
+       $("body").removeClass("modal-open")
+      r.innerHTML="";
+  }
+}
+    
+            $("body").delegate("#btn","click",function(event){
+                                        var ResId=$(this).attr('pid');
+                                  console.log(ResId);
+                localStorage.setItem("Restaurant",ResId);
+       
+                
+                $("body").addClass("modal-open");
+                
+                var r=document.getElementById("itms"); 
+                var q=1;
+                            r.innerHTML="<div><div id=\"Category\"><h2 id=\"catTitle\">Cateogory</h2><ul></ul></div><div id=\"all\"><div id=\"foods\"><ul></ul></div><div id=\"price-con\"><div id=\"prices\"><ul></ul></div></div><div id=\"btn-con\"><div id=\"btns\"><ul></ul></div></div></div></div>";
+                            var refCat = firebase.database().ref("Users/Restaurants/"+ResId+"/Category");
+                               var x=1;         
+                                        refCat.on("value", function(snapshot)
+                                        {
+                                             //console.log(snapshot.val().);
+                                                    snapshot.forEach(function(childSnapshot)
+                                                    {
+                                                        var catkey=childSnapshot.key;
+                                                         //var r=document.getElementById("itms");  
+                                                        // console.log(catkey);
+                                                        
+                                                        
+                                                         var catt=document.getElementById('Category');
+                                                                var lili=document.createElement('li');
+                                                                var aa=document.createElement('a');
+                                                                aa.setAttribute('href','#'+x)
+                                                                 x++;
+                                                                catt.appendChild(aa);
+                                                                aa.appendChild(lili);
+                                                                lili.innerHTML=lili.innerHTML+ childSnapshot.val();
+                                                       
+                                                         var fodcat=document.getElementById('foods');
+                                                    //    var licat=document.createElement('li');
+                                                      //  licat.setAttribute('id',x);
+                                                    //    fodcat.appendChild(licat);
+                                                      //  licat.innerHTML=licat.innerHTML+childSnapshot.val();
+                                                        
+                                                        //console.log('First');
+                                                            var first=0;
+                                                            var refI = firebase.database().ref("Users/Restaurants/"+ResId+"/Items");
+                                                           
+                                                           refI.orderByChild("Category").on("value", function(snapshot1)
+                                        {
+                                          //   console.log(snapshot.val().);
+                                                              // console.log('1');
+                                                    snapshot1.forEach(function(childSnapshot1)
+                                                    {
+                                                    
+                                                        
+                                                         var r=document.getElementById("itms");  
+                                                        if(childSnapshot1.val().Category==catkey)
+                                                            { var plzprint=0;
+                                                            //   console.log(childSnapshot1.val().Name);
+                                                                var fod=document.getElementById('foods');
+                                                             
+                                                            // var 
+                                                             var btnss=document.getElementById('btns');
+                                                             var prices=document.getElementById('prices');
+                                                             
+                                                            var liname=document.createElement('li');
+                                                             var liprice=document.createElement('li');
+                                                             
+                                                                var brk=document.createElement('br');
+                                                                var Button=document.createElement('input');
+                                                                Button.setAttribute('type','Button');
+                                                               // Button.setAttribute('id','addtoc');
+                                                             //Button.setAttribute('id','addToCart');
+                                                               Button.setAttribute('class','add-to-cart');
+                                                               Button.setAttribute('nam',childSnapshot1.val().Name);
+                                                             Button.setAttribute('ResID',ResId);
+                                                               Button.setAttribute('price',childSnapshot1.val().Price);
+                                                               Button.addEventListener("click", my);
+                                                             
+                                                           /*  $("body").delegate("#addtoc","click",function(event)
+                                                                                        {
+                                                                 my();
+                                                             });
+                                                             
+                                                          //   my();*/
+                                                                
+                                                                if(first==0)
+                                                                    {
+                                                                      
+                                                                        liname.setAttribute('id',q);
+                                                                        first=1;
+                                                                        q++;
+                                                                        console.log(liname.getAttribute('id')+liname.innerHTML);
+                                                                        plzprint=1;
+                                                                    }
+                                                                    
+                                                                
+                                                                fod.appendChild(liname);
+                                                                prices.appendChild(liprice);
+                                                    
+                                                                btnss.appendChild(Button);
+                                                                btnss.appendChild(brk);
+                                                                
+                                                                liname.innerHTML=liname.innerHTML +childSnapshot1.val().Name;
+                                                                liprice.innerHTML=liprice.innerHTML+childSnapshot1.val().Price+"$";
+                                                               // if(plzprint)
+                                                                 //  console.log(liname.innerHTML); 
+                                                            }
+                                                            
+                                                                
+                                                            
+                                                    });
+                                         });
+                                                        
+                                                       // console.log("____________________________________");
+                                                        
+                                                            //var fod=document.getElementById('foods');
+                                                        
+                                                            //var li=document.createElement('li');
+                                                            
+                                                            //li.innerHTML=childSnapshot.val().Name +"       "+childSnapshot.val().Price;
+                                                            
+                                                          //  fod.appendChild(li);
+                                                                
+                                                            
+                                                    });
+                                         });
+                
+                                        modal.style.display = "block";
+                                        
+        
+                                    
+                                    });
+        <!-----Cart------------------------------------------------------------>
+           
+            
+ 
+            
+            
+            
+            
+            
+            
+            
+            
+           
+                
+    function my()
+        {
+             var ResID =this.getAttribute('ResID');
+             if((localStorage.getItem("Restaurant"))=="null") 
+                 {
+                     localStorage.setItem("Restaurant",ResID);
+                 }
+            else
+                {
+                     if((localStorage.getItem("Restaurant"))==ResID) 
+                     {
+                         event.preventDefault();
+                         var name =this.getAttribute('nam');
+                         var price = Number(this.getAttribute('price'));
+                         shoppingCart.addItemToCart(name, price, 1);
+                         displayCart();
+                         console.log(name+" "+price);
+                     }
+                    else{
+                        window.alert('Remove Other Restaurant item first');
+                    }
+                }
+            
+        
+  
+        }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+       
+        //console.log( "hi");
+    </script>
+    <script src="JS/cart.js"></script>
+   <!-- The Modal Restaurants Items --> 
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=ASu8vgto2ji-HKe7HHs9zfRsjVbIm6E2vg1hL2cOjJQgR5wbQZ-ICBSaCV3zR8a_HPhXioCvpJ3dKx3n&currency=CAD"></script>
+
+           
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" id="modalcontent">
+ <div id="before">       
+      <div class="modal-header">
+        <h5 class="modal-title font" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div><h2 class="font total">Total price: </h2><h2 id="dolor">$</h2><span class="total-cart"></span></div>
+          <hr>
+          
+    
+      <div id="address">
+          <aaa>Address</aaa><br><br>
+          
+          <div id="address-cotainer">
+             <h class="fnt">FlatNo</h> &nbsp;&nbsp;
+              <input type="text" id="flat"><br>
+              <h class="fnt">Area</h>
+              <input type="text" id="area"><br>
+              <h class="fnt">City</h>
+              <input type="text" id="city"><br>
+                
+              <h class="fnt"> Cash on Delivery</h>&nbsp; <input type="radio" name="typ" id="cash">&nbsp;&nbsp;
+              <h class="fnt"> Paypal</h>&nbsp;&nbsp;<input type="radio" name="typ" id="payp" checked>
+          </div>
+          
+       </div>
+          
+      </div>
+        
+      <div class="modal-footer" id="footer">
+       
+          <button type="button"  class="btn btn-secondary font clear-cart" >Clear Cart</button>
+        
+          <div id="paypal-button-container"></div>
+          
+          <div id="errorTotal" style="color: #dd2600;font-family: oswald;font-size: 20px;"> Order total must be greater than 200$ </div>
+
+         
+      </div>
+</div>     
+   <div id="after"> 
+       <!---Modal--------------------------->
+       
+       <div class="modal-header">
+        <h5 class="modal-title font" id="exampleModalLabel" id="titleOrder" style="margin-left:200px;">Order</h5>
+        <button type="button" class="close" id="closeOrder" style="margin-left:170px;" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+       
+  <div id="orderPending">
+      <br>
+      <div id="mapab"></div>
+      <br>
+      <div id="orderr">
+      <hr class="hr11">
+      <p id="OrderNo"></p>
+      <hr class="hr11">
+      
+      <p id="ResName"></p>
+      <br>
+      <div id="ResItems">
+          <ul>
+          
+          </ul></div>
+      <p id="AddressUser"></p>
+      <p id="totalMoney"></p>
+      <p id="paidMoney"></p>
+      <p id="remainMoney"></p>
+          <p id="deliveryman" style="font-size: 18px;"></p>
+      <hr class="hr11">
+      <p id="status"></p>
+      
+      <div><p id="OrderStatus"></p></div>
+      </div>
+   
+  </div>
+    
+     <div id="orderDone">
+    
+    
+     </div>
+        
+      </div>    
+    </div>
+  </div>
+</div> 
+    
+    
+    <script>
+        
+        var addressData,itemsData,pendingStateData,pendingAmount,totalAmount,doneAmount;
+        console.log( "hi");
+        
+        
+        function createPending()
+        {
+               
+         
+            
+            var refItems = firebase.database().ref("Users/Customers/"+localStorage.getItem('userid')+"/Orders");
+            
+                 refItems.on("value", function(snapshot1)
+                        {
+                                          //   console.log(snapshot.val().);
+                                         console.log(snapshot1.val());
+                                         console.log("Order"+ snapshot1.exists());
+                     
+                       if((snapshot1.exists()) )
+                           {
+                               snapshot1.forEach(function(childSnapshot1)
+                                               {
+                                  console.log(childSnapshot1.val());
+                                 
+                                  var refOrders = firebase.database().ref("Orders/"+childSnapshot1.val());
+                                 
+                                  refOrders.on("value", function(snapshot2)
+                                               {
+                                        
+                                    
+                                     if((snapshot2.val().OrderStatus)!="Delivered" ){
+                                         
+                                     var modal=document.getElementById('modalcontent');
+                                         modal.classList.add("modal-content2");//   .modal-content
+                                         var carrt=document.getElementById('cart');
+                                        
+                                         carrt.classList.add("cart2");
+                                          carrt.classList.remove("cart");
+                                         
+                                          var before=document.getElementById("before");
+                                         var after=document.getElementById("after");
+          before.style.display="none";
+          after.style.display="block";                               
+          //const re= database.ref('Users/Restaurants/'+localStorage.getItem('Restaurant')+"/Orders");
+          shoppingCart.clearCart();
+                                         var cartbut=document.getElementById("cart-button");
+                                         
+                                         cartbut.innerHTML="Order";
+                                         
+                                          addressData=  snapshot2.val().Address;
+                                            itemsData=snapshot2.val().Items;
+                                            pendingStateData=snapshot2.val().Payment;
+                                            pendingAmount=snapshot2.val().PendingPayment;
+                                            totalAmount=snapshot2.val().Total;
+                                            doneAmount=snapshot2.val().DonePayment;
+                                           
+                                           
+                                          var OrderPending=document.getElementById('orderPending');
+                                         var mapabdiv=document.getElementById('mapab');
+                                         var ResName=document.getElementById('ResName');
+                                         var ResItemsdiv=document.getElementById('ResItems');
+                                         var totalMoney=document.getElementById('totalMoney');
+                                         var paidMoney=document.getElementById('paidMoney');
+                                          var remainMoney=document.getElementById('remainMoney');
+                                          var status=document.getElementById('status');
+                                         var AddressUser=document.getElementById('AddressUser');
+                                      var OrderNo=document.getElementById('OrderNo');
+                                         var OrderStatus=document.getElementById('OrderStatus');
+                                         var deliveryman=document.getElementById('deliveryman');
+                                     
+                                         $("#mapab").empty();
+                                         
+                                            var map=document.createElement('img');
+                                            map.setAttribute('src','gm.png');
+                                            map.setAttribute('id','gmap');
+                                            map.setAttribute('height','200px');
+           
+                                            //console.log("addd"+addressData);
+           
+                                        
+                                            AddressUser.innerHTML=addressData;
+            
+                                          ResName.innerHTML=snapshot2.val().ResID;
+                                            ResItemsdiv.innerHTML="";
+                                              
+                                            totalMoney.innerHTML=totalAmount;
+                                              
+                                                
+                                            remainMoney.innerHTML=pendingAmount;
+                                            OrderNo.innerHTML=snapshot2.val().OrderNo;
+                                            
+                                            OrderStatus.innerHTML=snapshot2.val().OrderStatus;
+                                            paidMoney.innerHTML=doneAmount;
+                                         
+                                           if(snapshot2.val().deliveryman=="Deliveryman will be assigned shortly...")
+                                                   deliveryman.innerHTML=snapshot2.val().deliveryman;
+                                         else
+                                                deliveryman.innerHTML=snapshot2.val().deliveryman+" will deliver your food very soon...";
+                                         
+                                         
+                                            for(var item in itemsData) {
+                                                    itemsData[item].name;
+                                                    itemsData[item].count;
+                        
+                                                    var li=document.createElement('li');
+                                                   li.innerHTML=itemsData[item].name+" x "+itemsData[item].count;
+                                                   // console.log( itemsData[item].name);
+                                                    //ResItemsdiv.innerHTML=ResItemsdiv.innerHTML+itemsData[item].name+"<b id=\"cross\">*</b>"+itemsData[item].count+"<br>";
+                                                    ResItemsdiv.appendChild(li);
+                                                }
+                    
+            
+                                           mapabdiv.appendChild(map);
+                                          // OrderPending.appendChild(add);
+                                            //OrderPending.appendChild(datas);
+                                              //OrderPending.appendChild(totaldata);
+                                              //OrderPending.appendChild(pendata);
+                                              //OrderPending.appendChild(donedata);
+                                          
+                                      }
+                                      else{
+                                           var carrt=document.getElementById('cart');
+                                         carrt.classList.remove("cart2");
+                                          carrt.classList.add("cart");
+                                            var modal=document.getElementById('modalcontent');
+                                         modal.classList.remove("modal-content2");
+                                         var after=document.getElementById("after");
+                                         after.style.display="none";
+                                      }
+                                           
+                               
+                                      
+                                  });
+                                 
+                                 
+                                 
+                             });
+                           }
+                     else{
+                         var after=document.getElementById("after");
+                       after.style.display="none";
+                     }
+                     
+                             
+            
+                         });
+            
+            
+            
+          
+            
+            
+            
+            
+        }
+        
+        const reffchanged = firebase.database().ref('Orders');
+        
+        reffchanged.on('child_changed', function(data) 
+                       {
+            var OrderStatus=document.getElementById('OrderStatus');
+            console.log(data.val());
+            var state=data.val().OrderStatus;
+             console.log(state);
+            
+            if(state=="Confirming")
+                {
+                    OrderStatus.innerHTML="Confirming";// createPending();
+            //          var before=document.getElementById("before");
+          //            var before=document.getElementById("after");
+        //  before.style.display="none";
+          //const re= database.ref('Users/Restaurants/'+localStorage.getItem('Restaurant')+"/Orders");
+       //   shoppingCart.clearCart();
+                }
+            else if(state=="Preparing")
+                {
+                     OrderStatus.innerHTML="Preparing"; //createPending();
+                }
+            else if(state==("PickedUp"))
+                {
+                   // console.log('Delivered..');
+                     OrderStatus.innerHTML="PickedUp";// createPending();
+                }
+             else if(state=="Delivered")
+                 {
+                     //console.log('Delivered..');
+                     carrt=document.getElementById("cart");
+                     carrt.classList.remove("cart2");
+                     carrt.classList.add("cart");
+                     
+                     var modal=document.getElementById('modalcontent');
+                                         modal.classList.remove("modal-content2");
+                     
+                     
+                                         var after=document.getElementById("after");
+                                         after.style.display="none";
+                     
+                      var before=document.getElementById("before");
+                                         before.style.display="block";
+                     
+                      var cartbu=document.getElementById("cart-button");
+                                         
+                                         cartbu.innerHTML="Cart (<span class=\"total-count\"></span>)";
+                     
+                 }
+            
+           
+});       
+        
+        
+   
+console.log( "hi");
+   createPending();
+   var Json;   
+    var mtotal=0;
+   var payState="";
+    var tempTotal,tempLeft;
+    
+    var rad = document.getElementsByName('typ');
+
+         
+           // ************************************************
+// Shopping Cart API
+// ************************************************
+
+var shoppingCart = (function() {
+  // =============================
+  // Private methods and propeties
+  // =============================
+  cart = [];
+  
+  // Constructor
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+      console.log(JSON.stringify(cart));
+      Json=JSON.stringify(cart);
+  }
+  
+    // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
+
+  // =============================
+  // Public methods and propeties
+  // =============================
+  var obj = {};
+  
+  // Add to cart
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  // Set count from item
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+     
+      
+    return Number(totalCart.toFixed(2));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+    
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+
+  // cart : Array
+  // Item : Object/Class
+  // addItemToCart : Function
+  // removeItemFromCart : Function
+  // removeItemFromCartAll : Function
+  // clearCart : Function
+  // countCart : Function
+  // totalCart : Function
+  // listCart : Function
+  // saveCart : Function
+  // loadCart : Function
+  return obj;
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+   
+    
+    
+  var cashond=document.getElementById('payp');
+   
+    
+    
+    // Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+    
+    /*
+    
+    
+    $('.order-now').click(function() {
+ // console.log(Json);
+        mtotal=0;
+        for(i in cart)
+            {
+                mtotal=mtotal+cart[i].price*cart[i].count;
+               // console.log(cart[i].name+" "+cart[i].price+"*"+cart[i].count);
+                console.log(mtotal);
+            }
+});
+
+*/
+      
+    
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+      
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name='" + cartArray[i].name + "'>-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name='" + cartArray[i].name + "'>+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger' data-name='" + cartArray[i].name + "'>X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";
+      
+  }
+    mtotal=shoppingCart.totalCart();
+    tempTotal=mtotal;
+    tempLeft=0;
+    console.log(mtotal);
+    checkT();  
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+   // console.log(name)
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+ // console.log(name)
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+   // console.log(name)
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+});
+   
+
+    displayCart();
+    
+   
+    
+for (var i = 0; i < rad.length; i++) {
+    rad[i].addEventListener('change', function() {
+        
+        console.log(this.id);
+        
+        if(this.id=='cash')
+            {
+                tempTotal=mtotal*0.1;
+                tempLeft=mtotal-tempTotal;
+               // payState="Pending";
+            }
+        else
+            {
+                tempTotal=mtotal;
+                tempLeft=0;
+                // payState="Done";
+                //console.log(tempTotal);
+            }
+            console.log(tempTotal+"\n"+tempLeft);
+           
+    });
+}
+    function addZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+    
+     paypal.Buttons({
+    
+ 
+
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            
+            value: tempTotal,
+            currency: 'CAD' 
+          }
+    
+        }]
+      });
+    },
+    onApprove: function(data, actions) 
+         {
+      // Capture the funds from the transaction
+      return actions.order.capture().then(function(details) {
+        // Show a success message to your buyer
+      //  alert('Transaction completed by ');
+          
+          if(tempLeft>0)
+              payState="Pending";
+          else
+              payState="Done";
+          
+           var cartArray = shoppingCart.listCart();
+          
+           var flat,area,city;
+           flat=document.getElementById('flat');
+           area=document.getElementById('area');
+           city=document.getElementById('city');
+          // address=document.getElementById('totaladd');
+          
+           var ToalAdd=flat.value+","+ area.value+","+ city.value;
+          
+          
+          var month = new Array();
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+
+  var d = new Date();
+  var mon = month[d.getMonth()];
+  var day = d.getDate();  
+  var year = d.getFullYear();  
+          var x = document.getElementById("demo");
+  var h = addZero(d.getHours());
+  var m = addZero(d.getMinutes());
+ // var s = addZero(d.getSeconds());
+           
+          var time=day+" "+mon+","+year+" "+h+":"+m;
+          // for(var i in cartArray)
+            //  {
+                 // console.log("CART"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+" "+cartArray[i].total);
+                  var ono=Math.floor((Math.random() * 1000000) + 1);
+                  const database = firebase.database();
+               
+                 const reff = database.ref('Orders');
+                 const  newref=reff.push();  
+                  var orderkey=newref.key;
+                reff.child(orderkey).set({
+                    OrderNo:ono,
+                    //ResID:
+                    UserID: localStorage.getItem('userid'),
+                    EmailID: localStorage.getItem('email'),
+                    ResID:localStorage.getItem('Restaurant'),
+                    Items:JSON.parse(Json),
+                    Address: ToalAdd,
+                    Payment: payState,
+                    deliveryman: "Deliveryman will be assigned shortly...",
+                    OrderStatus: "Confirming", 
+                    PendingPayment:tempLeft,
+                    DonePayment:tempTotal,
+                    Total:mtotal,
+                    Time:time
+                });
+          
+          const refff = database.ref('Users/Customers/'+localStorage.getItem('userid'));
+          
+          refff.child('Orders').update({
+             [orderkey]:orderkey
+          });
+          
+           const reffff = database.ref('Users/Restaurants/'+localStorage.getItem('Restaurant'));
+          
+          reffff.child('Orders').update({
+             [orderkey]:orderkey
+          });
+          
+          //var before=document.getElementById("before");
+          //before.style.display="none";
+          //const re= database.ref('Users/Restaurants/'+localStorage.getItem('Restaurant')+"/Orders");
+         // shoppingCart.clearCart();
+        
+          createPending();
+                  
+           //   }
+          
+          
+          
+          
+      });
+    }
+  }).render('#paypal-button-container');
+    
+  
+   function checkT()
+    {
+        
+   
+   
+if(mtotal>200)
+    {
+         var paycontainer=document.getElementById('paypal-button-container');
+        
+        var payerror=document.getElementById('errorTotal');
+        
+        payerror.style.display="none";
+        paycontainer.style.display = "block";
+        
+        
+        
+    }
+        else{
+            var paycontainer=document.getElementById('paypal-button-container');
+            var payerror=document.getElementById('errorTotal');
+        
+           payerror.style.display="block";
+            paycontainer.style.display = "none";
+        }
+  
+   return;
+        
+    }
+    
+    
+</script>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

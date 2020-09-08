@@ -1,0 +1,126 @@
+/* The Modal (background) */
+.modal-res {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-res  {
+    display:flex;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 45%;
+    overflow:visible;
+    
+    
+}
+body.modal-open {
+    overflow: hidden;
+}
+
+/* The Close Button */
+.close-res {
+  color: #aaaaaa;
+  float: right;
+    margin-left: 50px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-res:hover,
+.close-res:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#Category a{
+    text-decoration: none;
+    list-style: none;
+    color: #dd2600;
+    font-family: oswald;
+    font-size: 20px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 50px;
+   
+}
+
+#Category a:hover{
+    opacity: 0.6;
+}
+#Category a:focus{
+    color: yellow;
+}
+
+:target{
+    color: yellow;
+}
+
+#Category{
+    float: left;
+    
+}
+#foods{
+    text-decoration: none;
+    list-style: none;
+    
+    font-size: 20px;
+    font-family: oswald;
+    margin-right: 40px;
+    margin-left: 10px;
+    float: left;
+    color: #666666;
+    
+}
+
+#all{
+    overflow: auto;
+}
+
+#price-con{
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    
+    font-size: 20px;
+    font-family: oswald;
+    margin-right: 70px;
+    color: #666666;
+}
+
+#btn-con{
+    float:left;
+}
+
+#catTitle{
+    font-size: 25px;
+    font-family: oswald;
+}
+
+input{
+    border:none;
+    background: none;
+}
+.add-to-cart{
+    background-image: url('../add.png');
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+}
+
+.add-to-cart:hover{
+    opacity: 0.6;
+}

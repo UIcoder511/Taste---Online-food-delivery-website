@@ -1,0 +1,764 @@
+<html>
+
+    <head>
+        
+        <style>
+            *{box-sizing: border-box}
+body {font-family: oswald;margin: 0px;padding: 0px;}
+   
+.lii{
+	margin-top: -60px;
+  
+	padding: 0;
+}
+
+.cart{
+    margin-right: 100px;
+}
+
+body{
+    background: white;
+}
+
+#name{
+    margin-top: -47px;
+    margin-right: 110px;
+    font-family: oswald;
+    font-size: 22px;
+    color: #dd2600;
+}
+
+
+#logo{
+    margin-top: -2px;
+    width: 70px;
+    height: 70px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#logo:hover{
+    animation: scal 0.2s;
+    transform: scale(1.08);
+}
+
+
+
+
+.btns{
+    float: right;
+}
+
+
+
+.main-nav {
+    
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    position: fixed;
+    display: block;
+    
+    width:1366px;
+    height: 70px;
+    box-shadow: 0px 0px 40px 4px #bbb;
+
+}
+/* Style the tab */
+.tab {
+  float: left;
+  box-shadow: 0px 0px 10px 1px #dddddd;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: white;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+            
+            div,button{
+                font-family: oswald;
+            }
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #eeeeee;
+}
+
+/* Style the tab content */
+.tabcontent {
+    
+    margin-top: 50px;
+   
+  float: left;
+  padding: 0px 12px;
+  
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+             .resNAME{
+                float: left;
+                 font-size: 20px;
+                margin-left: 200px;
+                margin-top: -15px;
+            }
+            
+            .resLOGO{
+                float: left;
+                margin-top: -50px;
+                    margin-left: -50px;
+            }
+            
+            
+            
+            .bt{
+                margin-top: -40px;
+                margin-right: 110px;
+                float: right;
+                border: none;
+                background: white;
+                font-family: oswald;
+                font-size: 20px;
+               
+                border: 1px solid ;
+                border-radius: 4px;
+
+            }  
+            
+            .bt:hover{
+                 color: gray;
+            }
+            
+            .bt2:hover{
+                color: gray;
+            }
+            
+            .single{
+                display:block;
+                margin: 10px;
+                padding: 60px;
+                box-shadow: 0px 0px 10px 1px gray;
+            }
+            
+           
+.main-nav li {
+	list-style: none;
+	float: right;
+}
+
+#aa{
+    width: 100px;
+}
+.btns a {
+  display: block;
+	margin-right:10px;
+	padding: 2px 25px;
+	text-decoration: none;
+	border-radius: 60px;
+  line-height: 45px;
+  color: #FFF;
+	-webkit-transition: all 0.30s ease-in-out;
+  	-moz-transition: all 0.30s ease-in-out;
+  	-ms-transition: all 0.30s ease-in-out;
+  	-o-transition: all 0.30s ease-in-out;
+}
+
+.main-nav li:nth-child(1) a {
+	background: #dd3600;
+	border: 2px solid #fff;
+    font-family: oswald;
+    text-decoration: none;
+}
+.main-nav li:nth-child(1) a:hover {
+	background: #fff;
+	color: #dd2600;
+    text-decoration: none;
+    
+}
+
+.main-nav li:nth-child(2) a {
+ background: #dd2600;
+	border: 2px solid #fff;
+    font-family: oswald;
+}
+.main-nav li:nth-child(2) a:hover {
+background: #fff;
+	color: #dd2600;
+}
+
+.main-nav li:nth-child(3) a {
+  background: #dd3600;
+	border: 2px solid #fff;
+    font-family: oswald;
+}
+.main-nav li:nth-child(3) a:hover {
+	background: #fff;
+	color: #dd3600;
+}
+            
+            #London{
+                display: none;
+            }
+
+              #Paris{
+                display: none;
+            }
+            
+            #Tokyo{
+                display: none;
+            }
+            
+            
+            .or{
+                box-shadow: 0px 0px 10px 1px gray;
+                padding: 10px;
+                margin: 10px;
+            }
+            
+           
+            
+            .bt2{
+                margin-top: -40px;
+                margin-right: 10px;
+                float: right;
+                border: none;
+                background: white;
+                font-family: oswald;
+                font-size: 20px;
+                
+                border: 1px solid ;
+                border-radius: 4px;
+            }
+            
+</style>
+    
+    <script>
+         function logoutDEL()
+        {
+            
+           // localStorage.clear();
+            localStorage.removeItem('emailDEL');
+            localStorage.removeItem('useridDEL');
+            localStorage.removeItem('usernameDEL');
+            window.location.href = 'Delivery.html';
+        }
+    
+    
+    
+    </script>
+    
+    </head>
+
+    <body>
+        
+        <div class="main-nav" style="box-shadow: 0px 0px 10px 2px #dddddd;">
+          
+        <div id="logo"><a id="aa"  href="RestaurantProfile.html"><img src="https://firebasestorage.googleapis.com/v0/b/taste-511.appspot.com/o/Logo%2FTasteLogo.jpg?alt=media&token=b922f9b4-66dd-4e35-b841-425062c0be5e" width="60px" width="60px" style="margin: 7px;margin-left: 30px;" ></a></div>
+            
+        
+       
+       
+            
+             <div class="btns">
+	       <ul> 
+               
+               <li class="lii"><a class="Login"  style="margin-top:-15px;margin-right: 40px;" href="#0" id="lo" onclick="logoutDEL()">Logout</a></li>
+		       <!--li><a class="signup" href="#0">Sign up</a></li-->
+               <li id="name" class="lii" style="padding-right: 60px;margin-top:-65px;"><script>document.write(localStorage.getItem("usernameDEL"))</script></li>
+              
+	       </ul>
+        </div>
+            
+            
+        </div>
+        
+        
+       
+
+    
+        
+<div class="tab" style="margin-top: 70px;">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Assigned Orders</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Completed Orders</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">-</button>
+</div>
+        
+        
+        
+        
+
+<div id="London" class="tabcontent" style="margin-top: 45px;">
+    
+    <div >
+            <p style="font-size: 25px;padding: 10px;color: #dd2600;">Orders</p>
+        
+            <div id="Orders" style="margin-left: 30px;margin-top: -10px;">
+        
+            </div>
+        
+        
+    </div>
+    
+    
+  
+</div>
+
+              
+
+<div id="Paris" class="tabcontent" style="margin-top: 45px;">
+    
+    <div >
+            <p style="font-size: 25px;padding: 10px;color: #dd2600;">Orders</p>
+        
+            <div id="Orders2" style="margin-left: 30px;margin-top: -10px;">
+        
+            </div>
+        
+        
+    </div>
+    
+    
+  
+</div>  
+   
+        
+    
+    
+       
+        <!------------------Firebase------------------------------------------------------------------>
+
+		
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-storage.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBcZtlVRDsiZNoYhFuCTnLyhQvPCGoR8rc",
+    authDomain: "taste-511.firebaseapp.com",
+    databaseURL: "https://taste-511.firebaseio.com",
+    projectId: "taste-511",
+    storageBucket: "taste-511.appspot.com",
+    messagingSenderId: "179496115918"
+  };
+  firebase.initializeApp(config);
+</script>
+        
+        <script>
+function openCity(evt, cityName) 
+            {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  if(cityName=="London")
+    fun();
+    if(cityName=="Paris")
+      fun2();
+    // const database = firebase.database();
+               
+    //const ref = database.ref('Users/Restaurants');
+            }
+            
+            
+            
+             function fun()
+            {
+                
+      
+                console.log('hii');
+                var Orderr=document.getElementById('Orders');
+                
+                 //  var refItems = firebase.database().ref("Users/Customers/"+localStorage.getItem('userid')+"/Orders");
+               var refItems = firebase.database().ref("Users/Deliveryman/"+localStorage.getItem('useridDEL')+"/Orders");
+                 refItems.on("value", function(snapshot1)
+                        {
+                                          //   console.log(snapshot.val().);
+                                         console.log(snapshot1.val());
+                                         console.log("Order"+ snapshot1.exists());
+                     
+                       if((snapshot1.exists()) )
+                           {
+                               
+                               
+                               Orderr.innerHTML="";
+                               snapshot1.forEach(function(childSnapshot1)
+                                               {
+                                //  console.log(childSnapshot1.val());
+                                 
+                                  var refOrders = firebase.database().ref("Orders/"+childSnapshot1.val());
+                                 
+                                  refOrders.once("value", function(snapshot2)
+                                               {
+                                        
+                                 //   console.log(snapshot2.val());
+                                     if((snapshot2.val().OrderStatus)!="Delivered" ){
+                                         
+        
+                                         // console.log(snapshot2.val());
+                                          var addressData=  snapshot2.val().Address;
+                                          var  itemsData=snapshot2.val().Items;
+                                          var  pendingStateData=snapshot2.val().Payment;
+                                          var   pendingAmount=snapshot2.val().PendingPayment;
+                                          var  totalAmount=snapshot2.val().Total;
+                                          var  doneAmount=snapshot2.val().DonePayment;
+                                           
+                                         var div=document.createElement('div');
+                                         div.setAttribute('class','or');
+                                         var idiv=document.createElement('div');
+                                         
+                                           
+                                         var OrderPending=document.createElement('pa');
+                                      
+                                         var totalMoney=document.createElement('pa');
+                                         var paidMoney=document.createElement('pa');
+                                          var remainMoney=document.createElement('pa');
+                                        
+                                         var AddressUser=document.createElement('pa');
+                                         var OrderNo=document.createElement('pa');
+                                         var OrderStatus=document.createElement('pa');
+                                         var res=document.createElement('pa');
+                                         
+                                         
+                                            
+                                         var TOrderPending=document.createElement('pa');
+                                      
+                                         var TtotalMoney=document.createElement('pa');
+                                         var TpaidMoney=document.createElement('pa');
+                                          var TremainMoney=document.createElement('pa');
+                                        
+                                         var TAddressUser=document.createElement('pa');
+                                         var TOrderNo=document.createElement('pa');
+                                         var TOrderStatus=document.createElement('pa');
+                                var Tres=document.createElement('pa');
+                                            //console.log("addd"+addressData);
+                                          var br=document.createElement('br');
+                                         var br1=document.createElement('br');
+                                   var brr=document.createElement('br');
+                                         var br2=document.createElement('br');
+                                         var br3=document.createElement('br');
+                                         var br4=document.createElement('br');
+                                         var br5=document.createElement('br');
+                                  res.innerHTML=snapshot2.val().ResID;
+                                            AddressUser.innerHTML=addressData;
+                                            //ResName.innerHTML=snapshot2.val().ResID;
+                                            idiv.innerHTML=""; 
+                                            totalMoney.innerHTML=totalAmount+"$";
+                                            remainMoney.innerHTML=pendingAmount+"$";
+                                            OrderNo.innerHTML=snapshot2.val().OrderNo;
+                                            OrderStatus.innerHTML=snapshot2.val().OrderStatus;
+                                            paidMoney.innerHTML=doneAmount+"$";
+                                    Tres.innerHTML="Restaurant: ";     
+                                            TAddressUser.innerHTML="Address :";
+                                            //ResName.innerHTML=snapshot2.val().ResID;
+                                            idiv.innerHTML=""; 
+                                            TtotalMoney.innerHTML="TotalAmount :";
+                                            TremainMoney.innerHTML="PendingAmount :";
+                                            TOrderNo.innerHTML="OrderNo :"
+                                            TOrderStatus.innerHTML="OrderStatus :";
+                                            TpaidMoney.innerHTML="DoneAmount :";
+                                         
+                                         
+                                          var button=document.createElement('input');
+                                   // button.setAttribute('onclick',req);
+                                    button.setAttribute('type','button');
+                                    button.setAttribute('value','Picked Up');
+                                    button.setAttribute('class','bt');
+                                    button.setAttribute('oid',childSnapshot1.val());
+                                    button.addEventListener("click", pick);
+                                         
+                                         var button2=document.createElement('input');
+                                   // button.setAttribute('onclick',req);
+                                    button2.setAttribute('type','button');
+                                    button2.setAttribute('value','Delivered');
+                                    button2.setAttribute('class','bt2');
+                                    button2.setAttribute('oid',childSnapshot1.val());
+                                    button2.addEventListener("click", pick);
+                                         
+                                              
+                                            for(var item in itemsData) {
+                                                    itemsData[item].name;
+                                                    itemsData[item].count;
+                        
+                                                    var li=document.createElement('li');
+                                                   li.innerHTML=itemsData[item].name+" x "+itemsData[item].count;
+                                                   // console.log( itemsData[item].name);
+                                                    //ResItemsdiv.innerHTML=ResItemsdiv.innerHTML+itemsData[item].name+"<b id=\"cross\">*</b>"+itemsData[item].count+"<br>";
+                                                    idiv.appendChild(li);
+                                                }
+                    
+                                      div.appendChild(TOrderNo);   div.appendChild(OrderNo);div.appendChild(br);
+                                          div.appendChild(Tres);   div.appendChild(res);div.appendChild(brr);
+                                       div.appendChild(TOrderStatus);   div.appendChild(OrderStatus);  div.appendChild(br1);
+                                        div.appendChild(TAddressUser);  div.appendChild(AddressUser);  div.appendChild(br2);
+                                       div.appendChild(TremainMoney);  div.appendChild(remainMoney);   div.appendChild(br3);
+                                      div.appendChild(TpaidMoney);   div.appendChild(paidMoney);  div.appendChild(br4);
+                                     div.appendChild(TtotalMoney);    div.appendChild(totalMoney);   div.appendChild(br5);
+                                           div.appendChild(idiv);
+                                         div.appendChild(button);
+                                         div.appendChild(button2);
+                                         Orderr.appendChild(div);
+                                          // OrderPending.appendChild(add);
+                                            //OrderPending.appendChild(datas);
+                                              //OrderPending.appendChild(totaldata);
+                                              //OrderPending.appendChild(pendata);
+                                              //OrderPending.appendChild(donedata);
+                                          
+                                      }
+                                      else{
+                                          
+                                      }
+                                           
+                               
+                                      
+                                  });
+                                 
+                                 
+                                 
+                             });
+                           }
+                     else{
+                        
+                     }
+                     
+                             
+            
+                         });
+            
+            
+            
+          
+            
+                
+                
+            }
+            
+            function pick()
+            {
+                var ref = firebase.database().ref("Orders/"+this.getAttribute('oid'));
+                console.log(this.getAttribute('oid'));
+                console.log(this.getAttribute('value'));
+                if(this.getAttribute('value')=="Picked Up")
+                    {
+                         ref.update({
+                                OrderStatus:"Picked Up"
+                         });
+                    }
+                if(this.getAttribute('value')=="Delivered")
+                    {
+                         ref.update({
+                                OrderStatus:"Delivered"
+                            });
+                    }
+         
+        
+       
+            }
+            
+            
+             const reffchanged = firebase.database().ref('Orders');
+        
+        reffchanged.on('child_changed', function(data) 
+                       {
+                            fun();
+               });
+            
+            
+            
+            function fun2()
+            {
+                
+                console.log('hii');
+                var Orderr=document.getElementById('Orders2');
+                
+                 //  var refItems = firebase.database().ref("Users/Customers/"+localStorage.getItem('userid')+"/Orders");
+               var refItems = firebase.database().ref("Users/Deliveryman/"+localStorage.getItem('useridDEL')+"/Orders");
+                 refItems.on("value", function(snapshot1)
+                        {
+                                          //   console.log(snapshot.val().);
+                                         console.log(snapshot1.val());
+                                         console.log("Order"+ snapshot1.exists());
+                     
+                       if((snapshot1.exists()) )
+                           {
+                               
+                               
+                               Orderr.innerHTML="";
+                               snapshot1.forEach(function(childSnapshot1)
+                                               {
+                                //  console.log(childSnapshot1.val());
+                                 
+                                  var refOrders = firebase.database().ref("Orders/"+childSnapshot1.val());
+                                 
+                                  refOrders.once("value", function(snapshot2)
+                                               {
+                                        
+                                 //   console.log(snapshot2.val());
+                                     if((snapshot2.val().OrderStatus)=="Delivered" ){
+                                         
+        
+                                         // console.log(snapshot2.val());
+                                          var addressData=  snapshot2.val().Address;
+                                          var  itemsData=snapshot2.val().Items;
+                                          var  pendingStateData=snapshot2.val().Payment;
+                                          var   pendingAmount=snapshot2.val().PendingPayment;
+                                          var  totalAmount=snapshot2.val().Total;
+                                          var  doneAmount=snapshot2.val().DonePayment;
+                                           
+                                         var div=document.createElement('div');
+                                         div.setAttribute('class','or');
+                                         var idiv=document.createElement('div');
+                                         
+                                           
+                                         var OrderPending=document.createElement('pa');
+                                      
+                                         var totalMoney=document.createElement('pa');
+                                         var paidMoney=document.createElement('pa');
+                                          var remainMoney=document.createElement('pa');
+                                        
+                                         var AddressUser=document.createElement('pa');
+                                         var OrderNo=document.createElement('pa');
+                                         var OrderStatus=document.createElement('pa');
+                                         var res=document.createElement('pa');
+                                         
+                                         
+                                            
+                                         var TOrderPending=document.createElement('pa');
+                                      
+                                         var TtotalMoney=document.createElement('pa');
+                                         var TpaidMoney=document.createElement('pa');
+                                          var TremainMoney=document.createElement('pa');
+                                        
+                                         var TAddressUser=document.createElement('pa');
+                                         var TOrderNo=document.createElement('pa');
+                                         var TOrderStatus=document.createElement('pa');
+                                var Tres=document.createElement('pa');
+                                            //console.log("addd"+addressData);
+                                          var br=document.createElement('br');
+                                         var br1=document.createElement('br');
+                                   var brr=document.createElement('br');
+                                         var br2=document.createElement('br');
+                                         var br3=document.createElement('br');
+                                         var br4=document.createElement('br');
+                                         var br5=document.createElement('br');
+                                  res.innerHTML=snapshot2.val().ResID;
+                                            AddressUser.innerHTML=addressData;
+                                            //ResName.innerHTML=snapshot2.val().ResID;
+                                            idiv.innerHTML=""; 
+                                            totalMoney.innerHTML=totalAmount+"$";
+                                            remainMoney.innerHTML=pendingAmount+"$";
+                                            OrderNo.innerHTML=snapshot2.val().OrderNo;
+                                            OrderStatus.innerHTML=snapshot2.val().OrderStatus;
+                                            paidMoney.innerHTML=doneAmount+"$";
+                                    Tres.innerHTML="Restaurant: ";     
+                                            TAddressUser.innerHTML="Address :";
+                                            //ResName.innerHTML=snapshot2.val().ResID;
+                                            idiv.innerHTML=""; 
+                                            TtotalMoney.innerHTML="TotalAmount :";
+                                            TremainMoney.innerHTML="PendingAmount :";
+                                            TOrderNo.innerHTML="OrderNo :"
+                                            TOrderStatus.innerHTML="OrderStatus :";
+                                            TpaidMoney.innerHTML="DoneAmount :";
+                                         
+                                         
+                                  
+                                         
+                                              
+                                            for(var item in itemsData) {
+                                                    itemsData[item].name;
+                                                    itemsData[item].count;
+                        
+                                                    var li=document.createElement('li');
+                                                   li.innerHTML=itemsData[item].name+" x "+itemsData[item].count;
+                                                   // console.log( itemsData[item].name);
+                                                    //ResItemsdiv.innerHTML=ResItemsdiv.innerHTML+itemsData[item].name+"<b id=\"cross\">*</b>"+itemsData[item].count+"<br>";
+                                                    idiv.appendChild(li);
+                                                }
+                    
+                                      div.appendChild(TOrderNo);   div.appendChild(OrderNo);div.appendChild(br);
+                                          div.appendChild(Tres);   div.appendChild(res);div.appendChild(brr);
+                                       div.appendChild(TOrderStatus);   div.appendChild(OrderStatus);  div.appendChild(br1);
+                                        div.appendChild(TAddressUser);  div.appendChild(AddressUser);  div.appendChild(br2);
+                                       div.appendChild(TremainMoney);  div.appendChild(remainMoney);   div.appendChild(br3);
+                                      div.appendChild(TpaidMoney);   div.appendChild(paidMoney);  div.appendChild(br4);
+                                     div.appendChild(TtotalMoney);    div.appendChild(totalMoney);   div.appendChild(br5);
+                                           div.appendChild(idiv);
+                                       
+                                         Orderr.appendChild(div);
+                                          // OrderPending.appendChild(add);
+                                            //OrderPending.appendChild(datas);
+                                              //OrderPending.appendChild(totaldata);
+                                              //OrderPending.appendChild(pendata);
+                                              //OrderPending.appendChild(donedata);
+                                          
+                                      }
+                                      else{
+                                          
+                                      }
+                                           
+                               
+                                      
+                                  });
+                                 
+                                 
+                                 
+                             });
+                           }
+                     else{
+                        
+                     }
+                     
+                             
+            
+                         });
+            
+            
+            
+          
+            
+                
+            }
+            
+         
+           
+  
+
+
+</script>
+        
+        
+    </body>
+
+
+</html>
